@@ -54,12 +54,20 @@ template {
   display: none;
 }
 a {
+  text-decoration: none;
+  color: SteelBlue;
+  font-weight: bold;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+a:visited {
+  color: SlateBlue;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
