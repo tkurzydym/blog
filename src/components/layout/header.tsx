@@ -22,6 +22,9 @@ const ExternalLinks = styled.div`
   padding: 0.5em;
   padding-right: 1em;
   float: right;
+  a {
+    border: 0;
+  }
 `
 
 const BrandLink = styled.a`
