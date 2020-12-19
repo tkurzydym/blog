@@ -20,6 +20,8 @@ const StyledLink = styled.div`
       color: black;
     }
   }
+  
+
 `
 
 export const Sidebar: React.FC = () => (
@@ -29,7 +31,7 @@ export const Sidebar: React.FC = () => (
       <StyledLink>
         <Link to="/" activeStyle={{ color: 'black' }}>
           Recent Posts
-        </Link>{" "}
+        </Link>
         {/** use activeClassName to control icon or aplly some style */}
       </StyledLink>
       {/** Technology Stack!, Link to Talks, External Blogs, ... */}

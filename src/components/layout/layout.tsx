@@ -13,18 +13,23 @@ import Header from "./header"
 
 import "./layout.css"
 import Sidebar from "./sidebar"
+import Toolbar from "./toolbar"
 
 import styled from "styled-components"
 import MediaQuery from "react-responsive"
 
 const Container = styled.div`
   @media only screen and (max-width: 950px) {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   @media only screen and (min-width: 951px) {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  p {
+    width: 80%;
   }
 `
 
@@ -58,6 +63,22 @@ const MainContainer = styled.div`
   padding: 0 1.0875rem 1.45rem;
 `
 
+const StyledToolbar = styled.div`
+  width: 100%;
+  padding: 0.5em;
+  margin: 1em auto;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-image: -webkit-gradient(
+    linear,
+    0 0,
+    100% 0,
+    color-stop(0, transparent),
+    color-stop(0.5, grey),
+    color-stop(1, transparent)
+  )
+  100% 0%;
+`
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -75,11 +96,16 @@ const Layout = ({ children }) => {
       
       <MediaQuery minWidth={951}>
         <SidebarContainer>
-            <Sidebar></Sidebar>
+            <Sidebar />
         </SidebarContainer>
       </MediaQuery>
       <Container>
         <MainContainer>
+          <MediaQuery maxWidth={950}>
+            <StyledToolbar>
+              <Toolbar></Toolbar>
+            </StyledToolbar>
+          </MediaQuery>
           <main>{children}</main>
         </MainContainer>
 

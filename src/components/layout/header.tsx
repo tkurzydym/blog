@@ -25,6 +25,9 @@ const ExternalLinks = styled.div`
   a {
     border: 0;
   }
+  a:visited {
+    color: grey;
+  }
 `
 
 const BrandLink = styled.a`
@@ -64,18 +67,21 @@ const Header = ({ siteTitle }) => (
       <BrandLink
         href="https://github.com/tkurzydym"
         title="tkurzydym github profile"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
       </BrandLink>
       <BrandLink
         href="https://twitter.com/TKurzydym"
         title="tkurzydym twitter profile"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
       </BrandLink>
       <BrandLink
         href="https://www.xing.com/profile/Tobias_Kurzydym/cv"
         title="tkurzydym xing profile"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faXing}></FontAwesomeIcon>
       </BrandLink>
