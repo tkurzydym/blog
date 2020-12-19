@@ -29,11 +29,16 @@ module.exports = {
         name: `tkurzydym-blog`,
         short_name: `blog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#87CEFA`,
+        theme_color: `#87CEFA`,
         display: `minimal-ui`,
         icon: 'favicons/favicon-32x32.png',
         icons: [
+            {
+              src: '/favicons/android-chrome-512x512.png',
+              sizes: '512x512',
+              type: 'image/png'
+            },
             {
               src: '/favicons/android-chrome-192x192.png',
               sizes: '192x192',
