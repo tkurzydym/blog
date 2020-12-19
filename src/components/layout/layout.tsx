@@ -76,7 +76,7 @@ const Layout = ({ children }) => {
       
       <MediaQuery minWidth={951}>
         <SidebarContainer>
-            <Sidebar docked={true} open={true}></Sidebar>
+            <Sidebar></Sidebar>
         </SidebarContainer>
       </MediaQuery>
       <Container>

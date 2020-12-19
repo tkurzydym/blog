@@ -3,11 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import MediaQuery from 'react-responsive'
 
-type SidebarProps = {
-  docked: boolean
-  open: boolean
-}
-
 const MenuList = styled.ul`
   margin-top: 10%;
 `
@@ -27,10 +22,7 @@ const StyledLink = styled.div`
   }
 `
 
-export const Sidebar: React.FC<SidebarProps> = ({
-  docked,
-  open,
-}: SidebarProps) => (
+export const Sidebar: React.FC = () => (
   <>
   <MediaQuery minWidth={951}>
     <MenuList>
