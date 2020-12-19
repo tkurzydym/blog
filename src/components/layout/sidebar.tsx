@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import MediaQuery from 'react-responsive'
 
 type SidebarProps = {
   docked: boolean
@@ -30,25 +31,29 @@ export const Sidebar: React.FC<SidebarProps> = ({
   docked,
   open,
 }: SidebarProps) => (
-  <MenuList>
-    <StyledLink>
-      <Link to="/" activeStyle={{ color: 'black' }}>
-        Recent Posts
-      </Link>{" "}
-      {/** use activeClassName to control icon or aplly some style */}
-    </StyledLink>
-    {/** Technology Stack!, Link to Talks, External Blogs, ... */}
-    <StyledLink>
-      <Link to="/archive" activeStyle={{ color: 'black' }}>
-        Archive
-      </Link>
-    </StyledLink>
-    <StyledLink>
-      <Link to="/about" activeStyle={{ color: 'black' }}>
-        About
-      </Link>
-    </StyledLink>
-  </MenuList>
+  <>
+  <MediaQuery minWidth={951}>
+    <MenuList>
+      <StyledLink>
+        <Link to="/" activeStyle={{ color: 'black' }}>
+          Recent Posts
+        </Link>{" "}
+        {/** use activeClassName to control icon or aplly some style */}
+      </StyledLink>
+      {/** Technology Stack!, Link to Talks, External Blogs, ... */}
+      <StyledLink>
+        <Link to="/archive" activeStyle={{ color: 'black' }}>
+          Archive
+        </Link>
+      </StyledLink>
+      <StyledLink>
+        <Link to="/about" activeStyle={{ color: 'black' }}>
+          About
+        </Link>
+      </StyledLink>
+    </MenuList>
+  </MediaQuery>
+  </>
 )
 
 export default Sidebar
