@@ -4,13 +4,16 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faTwitter, faXing } from "@fortawesome/free-brands-svg-icons"
+import MediaQuery from 'react-responsive'
 
 const Banner = styled.div`
   max-width: 960px;
   height: 50px;
   padding: 0.5em;
   padding-left: 1em;
-  position: fixed;
+  @media only screen and (min-width: 951px) {
+    position: fixed;
+  }
   float: left;
 `
 
@@ -47,7 +50,9 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <MediaQuery maxWidth={950}>TK</MediaQuery>
+          <MediaQuery minWidth={951}>{siteTitle}</MediaQuery>
+          
         </Link>
       </h2>
     </Banner>
