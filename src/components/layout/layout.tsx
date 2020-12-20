@@ -39,17 +39,6 @@ const SidebarContainer = styled.div`
   position: fixed;
   top: 10%;
   float: left;
-  border-style: double;
-  border-width: 1px;
-  -webkit-border-image: -webkit-gradient(
-      linear,
-      0 0,
-      0 100%,
-      color-stop(0, transparent),
-      color-stop(0.5, grey),
-      color-stop(1, transparent)
-    )
-    0 100%;;
   a {
     font-weight: normal;
   }
@@ -63,21 +52,10 @@ const MainContainer = styled.div`
   padding: 0 1.0875rem 1.45rem;
 `
 
-const StyledToolbar = styled.div`
+const ToolbarFrame = styled.div`
   width: 100%;
   padding: 0.5em;
   margin: 1em auto;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-border-image: -webkit-gradient(
-    linear,
-    0 0,
-    100% 0,
-    color-stop(0, transparent),
-    color-stop(0.5, grey),
-    color-stop(1, transparent)
-  )
-  100% 0%;
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -92,25 +70,23 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      
-      <MediaQuery minWidth={951}>
-        <SidebarContainer>
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
+        <MediaQuery minWidth={951}>
+          <SidebarContainer>
             <Sidebar />
-        </SidebarContainer>
-      </MediaQuery>
-      <Container>
-        <MainContainer>
-          <MediaQuery maxWidth={950}>
-            <StyledToolbar>
-              <Toolbar></Toolbar>
-            </StyledToolbar>
-          </MediaQuery>
-          <main>{children}</main>
-        </MainContainer>
-
-      </Container>
-
+          </SidebarContainer>
+        </MediaQuery>
+        <Container>
+          <MainContainer>
+            <MediaQuery maxWidth={950}>
+              <ToolbarFrame>
+                <Toolbar></Toolbar>
+              </ToolbarFrame>
+            </MediaQuery>
+            <main>{children}</main>
+          </MainContainer>
+        </Container>
     </>
   )
 }

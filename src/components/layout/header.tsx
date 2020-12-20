@@ -24,9 +24,15 @@ const ExternalLinks = styled.div`
   float: right;
   a {
     border: 0;
+    &:hover {
+      color: black;
+    }
   }
   a:visited {
     color: grey;
+    &:hover {
+      color: black;
+    }
   }
 `
 
@@ -68,22 +74,25 @@ const Header = ({ siteTitle }) => (
         href="https://github.com/tkurzydym"
         title="tkurzydym github profile"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+        <FontAwesomeIcon size="lg" icon={faGithub}></FontAwesomeIcon>
       </BrandLink>
       <BrandLink
         href="https://twitter.com/TKurzydym"
         title="tkurzydym twitter profile"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+        <FontAwesomeIcon size="lg" icon={faTwitter}></FontAwesomeIcon>
       </BrandLink>
       <BrandLink
         href="https://www.xing.com/profile/Tobias_Kurzydym/cv"
         title="tkurzydym xing profile"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faXing}></FontAwesomeIcon>
+        <FontAwesomeIcon size="lg" icon={faXing}></FontAwesomeIcon>
       </BrandLink>
     </ExternalLinks>
   </header>

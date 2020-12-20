@@ -2,10 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faNewspaper, faFolderOpen, faAddressCard, faCircle } from "@fortawesome/free-regular-svg-icons"
+import {
+  faCircle,
+} from "@fortawesome/free-regular-svg-icons"
 
 import styled from "styled-components"
-import MediaQuery from "react-responsive"
 
 const StyledToolbar = styled.div`
   a {
@@ -41,32 +42,16 @@ const ToolbarTitle = styled.span`
 export const Toolbar: React.FC = () => (
   <StyledToolbar>
     <Link to="/" activeStyle={{ color: "black" }}>
-      <FontAwesomeIcon
-        className="toolbarIcon"
-        title="Recent Posts"
-        icon={faNewspaper}
-      ></FontAwesomeIcon>
-      <MediaQuery minWidth={500}>
-        <ToolbarTitle>Recent Posts</ToolbarTitle>
-      </MediaQuery>
+      <ToolbarTitle>Recent Posts</ToolbarTitle>
     </Link>
     <FontAwesomeIcon className="sepIcon" icon={faCircle}></FontAwesomeIcon>
 
     <Link to="/archive" title="Archive" activeStyle={{ color: "black" }}>
-      <FontAwesomeIcon className="toolbarIcon" icon={faFolderOpen}></FontAwesomeIcon>
-      <MediaQuery minWidth={500}>
-        <ToolbarTitle>Archive</ToolbarTitle>
-      </MediaQuery>
+      <ToolbarTitle>Archive</ToolbarTitle>
     </Link>
     <FontAwesomeIcon className="sepIcon" icon={faCircle}></FontAwesomeIcon>
     <Link to="/about" title="About" activeStyle={{ color: "black" }}>
-      <FontAwesomeIcon
-        className="toolbarIcon"
-        icon={faAddressCard}
-      ></FontAwesomeIcon>
-      <MediaQuery minWidth={500}>
-        <ToolbarTitle>About</ToolbarTitle>
-      </MediaQuery>
+      <ToolbarTitle>About</ToolbarTitle>
     </Link>
   </StyledToolbar>
 )

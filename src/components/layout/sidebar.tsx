@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import MediaQuery from 'react-responsive'
 
 const MenuList = styled.ul`
   margin-top: 10%;
@@ -20,13 +19,10 @@ const StyledLink = styled.div`
       color: black;
     }
   }
-  
-
 `
 
 export const Sidebar: React.FC = () => (
   <>
-  <MediaQuery minWidth={951}>
     <MenuList>
       <StyledLink>
         <Link to="/" activeStyle={{ color: 'black' }}>
@@ -46,7 +42,6 @@ export const Sidebar: React.FC = () => (
         </Link>
       </StyledLink>
     </MenuList>
-  </MediaQuery>
   </>
 )
 
