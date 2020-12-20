@@ -2,10 +2,10 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Entry from "./entry"
 
-const RecentPosts = () => {
-  const posts = useStaticQuery(graphql`
-    query PostsQuery {
-      allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC}, limit: 5) {
+const ArchivePosts = () => {
+  const archive = useStaticQuery(graphql`
+    query ArchiveQuery {
+      allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC }, skip: 5) {
         edges {
           node {
             id
@@ -26,7 +26,7 @@ const RecentPosts = () => {
   return (
     <>
       <ul>
-        {posts.allAsciidoc.edges.map(({ node }) => (
+        {archive.allAsciidoc.edges.map(({ node }) => (
           <Entry key={node.id} node={node}></Entry>
         ))}
       </ul>
@@ -34,4 +34,4 @@ const RecentPosts = () => {
   )
 }
 
-export default RecentPosts
+export default ArchivePosts
