@@ -1,11 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Entry from "./entry"
 
 const ArchivePosts = () => {
   const archive = useStaticQuery(graphql`
     query ArchiveQuery {
-      allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC }, skip: 5) {
+      allAsciidoc(
+        sort: { fields: pageAttributes___publishdate, order: DESC }
+        skip: 5
+      ) {
         edges {
           node {
             id
@@ -29,6 +32,7 @@ const ArchivePosts = () => {
         {archive.allAsciidoc.edges.map(({ node }) => (
           <Entry key={node.id} node={node}></Entry>
         ))}
+        {archive.allAsciidoc.edges.length == 0 && <p>No blog posts have been archived until now. Go back to the <Link to="/">Recent Posts</Link> Page.</p>}
       </ul>
     </>
   )
