@@ -70,23 +70,24 @@ const Layout = ({ children }) => {
 
   return (
     <>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
+      <SidebarContainer>
         <MediaQuery minWidth={951}>
-          <SidebarContainer>
-            <Sidebar />
-          </SidebarContainer>
+          <Sidebar />
         </MediaQuery>
-        <Container>
-          <MainContainer>
-            <MediaQuery maxWidth={950}>
-              <ToolbarFrame>
-                <Toolbar></Toolbar>
-              </ToolbarFrame>
-            </MediaQuery>
-            <main>{children}</main>
-          </MainContainer>
-        </Container>
+      </SidebarContainer>
+
+      <Container>
+        <MainContainer>
+          <MediaQuery maxWidth={950}>
+            <ToolbarFrame>
+              <Toolbar></Toolbar>
+            </ToolbarFrame>
+          </MediaQuery>
+          <main>{children}</main>
+        </MainContainer>
+      </Container>
     </>
   )
 }

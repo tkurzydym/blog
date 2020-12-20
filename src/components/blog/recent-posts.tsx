@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Entry from "./entry"
 
-const Posts = () => {
+const RecentPosts = () => {
   const posts = useStaticQuery(graphql`
     query PostsQuery {
       allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC }) {
@@ -34,4 +34,4 @@ const Posts = () => {
   )
 }
 
-export default Posts
+export default RecentPosts
