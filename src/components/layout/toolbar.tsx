@@ -5,9 +5,9 @@ import styled from "styled-components"
 
 const StyledToolbar = styled.div`
   a {
-    color: grey;
+    color: var(--menuLinkLink);
     &:hover {
-      color: black;
+      color: var(--menuLinkHover);
     }
     border-width: 0px 0px 0px 0px;
     padding: 0.5em;
@@ -23,15 +23,23 @@ const ToolbarTitle = styled.span`
 
 export const Toolbar: React.FC = () => (
   <StyledToolbar>
-    <Link to="/" activeStyle={{ color: "black" }}>
+    <Link to="/" activeStyle={{ color: "var(--menuLinkHover)" }}>
       <ToolbarTitle>Recent Posts</ToolbarTitle>
     </Link>
 
-    <Link to="/archive" title="Archive" activeStyle={{ color: "black" }}>
+    <Link
+      to="/archive"
+      title="Archive"
+      activeStyle={{ color: "var(--menuLinkHover)" }}
+    >
       <ToolbarTitle>Archive</ToolbarTitle>
     </Link>
 
-    <Link to="/about" title="About" activeStyle={{ color: "black" }}>
+    <Link
+      to="/about"
+      title="About"
+      activeStyle={{ color: "var(--menuLinkHover)" }}
+    >
       <ToolbarTitle>About</ToolbarTitle>
     </Link>
   </StyledToolbar>

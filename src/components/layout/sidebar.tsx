@@ -9,14 +9,13 @@ const MenuList = styled.ul`
 const StyledLink = styled.div`
   margin: 10%;
   font-size: 25px;
-  color: #818181;
   display: block;
 
   a {
     text-decoration: none;
-    color: grey;
+    color: var(--menuLink);
     &:hover {
-      color: black;
+      color: var(--menuLinkHover);
     }
   }
 `
@@ -25,19 +24,19 @@ export const Sidebar: React.FC = () => (
   <>
     <MenuList>
       <StyledLink>
-        <Link to="/" activeStyle={{ color: 'black' }}>
+        <Link to="/" activeStyle={{ color: "var(--menuLinkHover)" }}>
           Recent Posts
         </Link>
         {/** use activeClassName to control icon or aplly some style */}
       </StyledLink>
       {/** Technology Stack!, Link to Talks, External Blogs, ... */}
       <StyledLink>
-        <Link to="/archive" activeStyle={{ color: 'black' }}>
+        <Link to="/archive" activeStyle={{ color: "var(--menuLinkHover)" }}>
           Archive
         </Link>
       </StyledLink>
       <StyledLink>
-        <Link to="/about" activeStyle={{ color: 'black' }}>
+        <Link to="/about" activeStyle={{ color: "var(--menuLinkHover)" }}>
           About
         </Link>
       </StyledLink>

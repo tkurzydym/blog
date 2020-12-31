@@ -7,18 +7,42 @@ html {
 }
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+
   font-family: "roboto", serif;
   font-weight: medium;
-  word-wrap: break-word;
+  font-feature-settings: "kern", "liga", "clig", "calt";
   font-kerning: normal;
+  word-wrap: break-word;
+
+  background-color: var(--bg);
+  color: var(--textNormal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+
+  --bg: ghostwhite;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: SteelBlue;
+  --textLinkVisited: SlateBlue;
+  --hr: hsla(0, 0%, 0%, 0.2);
+  --menuLink: grey;
+  --menuLinkHover: black;
 }
+
+body.dark {
+  --bg: rgb(19, 22, 34);
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: white; 
+  --textLink: lightsalmon;
+  --textLinkVisited:rgb(202, 154, 134);
+  --hr: hsla(0, 0%, 100%, 0.2);
+  --menuLink: lightgrey;
+  --menuLinkHover: white;
+}
+
 article,
 aside,
 details,
@@ -55,13 +79,13 @@ template {
 }
 a {
   text-decoration: none;
-  color: SteelBlue;
+  color: var(--textLink);
   font-weight: bold;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:visited {
-  color: SlateBlue;
+  color: var(--textLinkVisited);
 }
 a:active,
 a:hover {
