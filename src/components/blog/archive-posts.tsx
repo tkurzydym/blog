@@ -32,7 +32,7 @@ const ArchivePosts = () => {
         {archive.allAsciidoc.edges.map(({ node }) => (
           <Entry key={node.id} node={node}></Entry>
         ))}
-        {archive.allAsciidoc.edges.length == 0 && <p>No blog posts have been archived until now. Go back to the <Link to="/">Recent Posts</Link> Page.</p>}
+        {archive.allAsciidoc.edges.length == 0 && <p>No blog posts have been archived until now. Go back to the <Link to="/">Recent Posts</Link> Page.  </p>}
       </ul>
     </>
   )
