@@ -102,3 +102,7 @@ While it maybe isn't the cleanest solution in terms of performance or size, it i
 I don't have big Source Code chunks in my posts and my Website isn't too big in size anyway.
 With using markdown you get a pre-configured plugin which you just have to include though. That might be a way simpler
 way to include Syntax Highlighting if you don't insist on using asciidoctor.
+
+== Upcoming
+
+On the next Blog Post I will talk about Dark Modes.
