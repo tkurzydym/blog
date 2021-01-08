@@ -1,7 +1,6 @@
-:icons: font
 :page-title: Experiences with setting up Gatsby
 :page-category: Gatsby
-:page-publishdate: 13.12.2020
+:page-publishdate: 2020-12-13
 
 = Experiences with setting up Gatsby
 

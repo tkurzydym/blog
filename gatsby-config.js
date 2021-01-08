@@ -61,7 +61,6 @@ module.exports = {
             }
         ],
         theme_color_in_head: false
-        
       },
     },
     {

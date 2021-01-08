@@ -1,7 +1,7 @@
 :icons: font
 :page-title: Hello World!
 :page-category: General
-:page-publishdate: 05.12.2020
+:page-publishdate: 2020-12-05
 
 = First Blog Entry
 
@@ -14,4 +14,4 @@ provide a knowledge base to everyone else out there.
 
 == Upcoming
 Today i learnt how to setup a Gatsby Project for example, which will probably be the next blog post.
-If you want to setup a Gatsby Project yourself, stay tuned and you can learn what i learnt.
+If you want to setup a Gatsby Project yourself, stay tuned and you can learn what I learnt.
