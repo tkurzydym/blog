@@ -12,7 +12,8 @@
             "go",
             "shellsession",
             "json",
-            "graphql"
+            "graphql",
+            "jsx"
           ],
           "plugins": ["show-language"],
           "theme": "tomorrow",
