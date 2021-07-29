@@ -63,16 +63,6 @@ module.exports = {
         theme_color_in_head: false
       },
     },
-    {
-      resolve: `gatsby-transformer-asciidoc`,
-      options: {
-        attributes: {
-          showtitle: true,
-          fileExtensions: [`adoc`]
-        }
-      }
-    },
-    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-offline`
   ],
 }
