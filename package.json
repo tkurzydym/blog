@@ -2,7 +2,7 @@
   "name": "tkurzydym-blog",
   "private": true,
   "description": "Personal blog for documentation of my projects as developer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Tobias Kurzydym",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
