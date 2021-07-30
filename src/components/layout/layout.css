@@ -22,14 +22,14 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
 
-  --bg: ghostwhite;
-  --textNormal: #222;
-  --textTitle: #222;
-  --textLink: SteelBlue;
-  --textLinkVisited: SlateBlue;
+  --bg: #eee8d5;
+  --textNormal: #586e75;
+  --textTitle: #586e75;
+  --textLink: #268bd2;
+  --textLinkVisited: #6c71c4;
   --hr: hsla(0, 0%, 0%, 0.2);
-  --menuLink: grey;
-  --menuLinkHover: black;
+  --menuLink: #93a1a1;
+  --menuLinkHover: #586e75;
 }
 
 body.dark {
