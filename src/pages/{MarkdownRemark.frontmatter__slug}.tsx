@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/Layout"
 import SEO from "../components/layout/seo"
 import Prism from "prismjs"
 import styled  from "styled-components"
@@ -8,7 +8,7 @@ import { graphql } from "gatsby"
 import { useEffect } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCaretSquareUp as upReg } from "@fortawesome/free-regular-svg-icons"
+import { faChevronUp as chevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const ScrollTopIcon = styled.div`
   float: right;
@@ -28,7 +28,7 @@ export default function PostTemplate({ data } : any) {
 
   useEffect(() => {
     Prism.highlightAll();
-  })
+  }, [])
   
   return (
     <Layout>
@@ -36,7 +36,7 @@ export default function PostTemplate({ data } : any) {
         <div dangerouslySetInnerHTML={{ __html: html }}/>
 
         <ScrollTopIcon>
-          <FontAwesomeIcon size='2x' icon={upReg} onClick={scrollToTop}></FontAwesomeIcon>
+          <FontAwesomeIcon size='2x' icon={chevronUp} onClick={scrollToTop}></FontAwesomeIcon>
         </ScrollTopIcon>
     </Layout>
   )

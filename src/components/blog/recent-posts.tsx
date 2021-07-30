@@ -11,7 +11,7 @@ const RecentPosts = () => {
             id
             frontmatter {
               page_category
-              page_publishdate
+              page_publishdate(formatString: "MMMM DD, YYYY")
               page_title
               slug
             }
