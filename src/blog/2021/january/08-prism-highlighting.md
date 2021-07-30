@@ -1,7 +1,9 @@
-:page-title: PrismJS
-:page-category: Gatsby
-:page-publishdate: 2021-01-08
-
+---
+page-title: PrismJS
+page-category: Gatsby
+page-publishdate: 2021-01-08
+slug: blog/2021/january/08-prism-highlighting
+---
 # Syntax Highlighting
 
 Before Christmas I had set up this blog with GatsbyJS and I gave a brief introduction to what I did back then.

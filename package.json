@@ -24,6 +24,7 @@
     "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-asciidoc": "^2.10.0",
+    "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "highlight.js": "^11.1.0",
     "prismjs": "^1.24.1",

@@ -63,6 +63,7 @@ module.exports = {
         theme_color_in_head: false
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-offline`,
   ],
 }

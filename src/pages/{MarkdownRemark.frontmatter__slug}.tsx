@@ -22,7 +22,9 @@ function scrollToTop() {
     window.scrollTo({top: 0,left: 0, behavior: 'smooth'})
 }
 
-export default function PostTemplate({ data }) {
+export default function PostTemplate({ data } : any) {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
     Prism.highlightAll();
@@ -30,8 +32,8 @@ export default function PostTemplate({ data }) {
   
   return (
     <Layout>
-      <SEO title={data.asciidoc.document.title} />
-        <div dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}/>
+      <SEO title={frontmatter.title} />
+        <div dangerouslySetInnerHTML={{ __html: html }}/>
 
         <ScrollTopIcon>
           <FontAwesomeIcon size='2x' icon={upReg} onClick={scrollToTop}></FontAwesomeIcon>
@@ -42,16 +44,13 @@ export default function PostTemplate({ data }) {
 
 export const query = graphql`
   query($id: String!) {
-    asciidoc(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }) {
       html
-      document {
-        title
-        subtitle
-        main
-      }
-      pageAttributes {
-        category
-        publishdate
+      frontmatter {
+        page_category
+        page_publishdate
+        page_title
+        slug
         title
       }
     }

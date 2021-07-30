@@ -1,6 +1,9 @@
-:page-title: PrismJS
-:page-category: Gatsby
-:page-publishdate: 2021-01-08
+---
+page-title: Dark Mode
+page-category: Gatsby
+page-publishdate: 2021-01-08
+slug: blog/2021/january/09-dark-mode
+---
 
 # Dark Modes
 

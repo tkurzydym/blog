@@ -5,20 +5,18 @@ import Entry from "./entry"
 const ArchivePosts = () => {
   const archive = useStaticQuery(graphql`
     query ArchiveQuery {
-      allAsciidoc(
-        sort: { fields: pageAttributes___publishdate, order: DESC }
+      allMarkdownRemark(
+        sort: { fields: frontmatter___page_publishdate, order: DESC }
         skip: 5
       ) {
         edges {
           node {
             id
-            fields {
+            frontmatter {
+              page_category
+              page_publishdate
+              page_title
               slug
-            }
-            pageAttributes {
-              category
-              publishdate
-              title
             }
           }
         }
@@ -29,10 +27,10 @@ const ArchivePosts = () => {
   return (
     <>
       <ul>
-        {archive.allAsciidoc.edges.map(({ node }) => (
+        {archive.allMarkdownRemark.edges.map(({ node }) => (
           <Entry key={node.id} node={node}></Entry>
         ))}
-        {archive.allAsciidoc.edges.length == 0 && <p>No blog posts have been archived until now. Go back to the <Link to="/">Recent Posts</Link> Page.  </p>}
+        {archive.allMarkdownRemark.edges.length == 0 && <p>No blog posts have been archived until now. Go back to the <Link to="/">Recent Posts</Link> Page.  </p>}
       </ul>
     </>
   )

@@ -7,7 +7,6 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faTwitter, faXing } from "@fortawesome/free-brands-svg-icons"
 import { faLightbulb, faMoon } from "@fortawesome/free-regular-svg-icons"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 const Banner = styled.div`
   max-width: 960px;
@@ -96,35 +95,6 @@ const Header = ({ siteTitle }) => (
       </h2>
     </Banner>
     <TopRightToolbar>
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <IconCheckboxContainer>
-            {theme === "dark" && (
-              <DarkModeToggler>
-                <FontAwesomeIcon
-                  className="lightbulb"
-                  size="lg"
-                  icon={faLightbulb}
-                ></FontAwesomeIcon>
-              </DarkModeToggler>
-            )}
-            {theme === "light" && (
-              <DarkModeToggler>
-                <FontAwesomeIcon
-                  className="moon"
-                  size="lg"
-                  icon={faMoon}
-                ></FontAwesomeIcon>
-              </DarkModeToggler>
-            )}
-            <IconCheckbox
-              type="checkbox"
-              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-              checked={theme === "dark"}
-            />
-          </IconCheckboxContainer>
-        )}
-      </ThemeToggler>
       <ExternalLinks>
         <a
           href="https://github.com/tkurzydym"

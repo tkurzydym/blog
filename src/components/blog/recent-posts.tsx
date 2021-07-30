@@ -5,17 +5,15 @@ import Entry from "./entry"
 const RecentPosts = () => {
   const posts = useStaticQuery(graphql`
     query PostsQuery {
-      allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC}, limit: 5) {
+      allMarkdownRemark(sort: { fields: frontmatter___page_publishdate, order: DESC}, limit: 5) {
         edges {
           node {
             id
-            fields {
+            frontmatter {
+              page_category
+              page_publishdate
+              page_title
               slug
-            }
-            pageAttributes {
-              category
-              publishdate
-              title
             }
           }
         }
@@ -24,13 +22,11 @@ const RecentPosts = () => {
   `)
 
   return (
-    <>
-      <ul>
-        {posts.allAsciidoc.edges.map(({ node }) => (
-          <Entry key={node.id} node={node}></Entry>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {posts.allMarkdownRemark.edges.map(({ node }) => (
+        <Entry key={node.id} node={node}></Entry>
+      ))}
+    </ul>
   )
 }
 
