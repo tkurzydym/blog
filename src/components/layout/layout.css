@@ -30,6 +30,9 @@ body {
   --hr: hsla(0, 0%, 0%, 0.2);
   --menuLink: #93a1a1;
   --menuLinkHover: #586e75;
+
+
+  
 }
 
 body.dark {

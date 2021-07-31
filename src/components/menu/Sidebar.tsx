@@ -1,6 +1,6 @@
 import React from "react"
 
-import { MenuList, StyledLink } from "../styles/StyledMenu"
+import { MenuList } from "./StyledMenu"
 import { SidebarItem } from "./SidebarItem"
 
 const toolbarItems = [

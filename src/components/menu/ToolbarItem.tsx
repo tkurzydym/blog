@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Link } from "gatsby"
-import { StyledToolbarLink, ToolbarTitle } from "../styles/StyledToolbar"
+import { StyledToolbarLink, ToolbarTitle } from "./StyledToolbar"
 
 export const ToolbarItem = ({ item }) => (
   <StyledToolbarLink>

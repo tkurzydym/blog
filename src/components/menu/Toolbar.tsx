@@ -1,5 +1,5 @@
 import React from "react"
-import { StyledToolbar } from "../styles/StyledToolbar"
+import { StyledToolbar } from "./StyledToolbar"
 
 import { ToolbarItem } from "./ToolbarItem"
 

@@ -2,15 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./Header"
+import Header from "../header/Header"
 
 import "./layout.css"
-import Sidebar from "./Sidebar"
-import Toolbar from "./Toolbar"
+import Sidebar from "../menu/Sidebar"
+import Toolbar from "../menu/Toolbar"
 
 import MediaQuery from "react-responsive"
-import { ToolbarFrame } from "../styles/StyledToolbar"
-import { Container, MainContainer, SidebarContainer } from "../styles/StyledContainer"
+import { ToolbarFrame } from "../menu/StyledToolbar"
+import { Container, MainContainer, SidebarContainer } from "./StyledContainer"
 
 
 const Layout = ({ children }) => {

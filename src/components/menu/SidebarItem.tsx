@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import { StyledLink } from "../styles/StyledMenu"
+import { StyledLink } from "./StyledMenu"
 
 export const SidebarItem = ({item}) => {
   return (

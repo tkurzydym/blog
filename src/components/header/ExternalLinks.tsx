@@ -1,7 +1,7 @@
 import { faGithub, faTwitter, faXing } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
-import { ExternalLinksContainer, StyledExternalLinks } from "../styles/StyledExternalLinks"
+import { ExternalLinksContainer, StyledExternalLinks } from "./StyledExternalLinks"
 
 export const ExternalLinks = () => {
   return (

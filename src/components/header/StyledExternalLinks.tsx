@@ -15,7 +15,7 @@ const StyledExternalLinks = styled.span`
     padding-right: 0.5em;
     color: var(--menuLink);
     &:hover {
-      color: var(--menuLinkHover);
+      color: #2aa198;
     }
   }
 

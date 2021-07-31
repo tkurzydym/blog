@@ -1,19 +1,14 @@
 import React from "react"
 
-import { StyledHeader } from "../styles/StyledHeader"
+import { StyledHeader } from "./StyledHeader"
 import { Banner } from "./Banner"
 import { ExternalLinks } from "./ExternalLinks"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      height: 50,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <StyledHeader>
     <Banner siteTitle={siteTitle} />
     <ExternalLinks />
-  </header>
+  </StyledHeader>
 )
 
 export default Header
