@@ -11,7 +11,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@types/prismjs": "^1.16.6",
-    "@types/react-helmet": "^6.1.2",
     "@types/react-responsive": "^8.0.3",
     "babel-plugin-prismjs": "^2.1.0",
     "babel-plugin-styled-components": "^1.13.2",
@@ -25,19 +24,18 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-asciidoc": "^2.10.0",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.10.0",
-    "highlight.js": "^11.1.0",
     "prismjs": "^1.24.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-responsive": "^8.2.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.2",
     "@types/styled-components": "^5.1.11",
     "prettier": "2.3.2"
   },
@@ -51,8 +49,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "preload-fonts": "gatsby-preload-fonts"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
