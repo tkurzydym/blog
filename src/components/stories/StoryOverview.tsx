@@ -1,14 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Entry from "./entry"
+import Entry from "../blog/entry"
 
-const RecentPosts = () => {
-  const posts = useStaticQuery(graphql`
-    query PostsQuery {
+const StoryOverview = () => {
+  const stories = useStaticQuery(graphql`
+    query StoriesQuery {
       allMarkdownRemark(
         sort: { fields: frontmatter___publishdate, order: DESC},
-        filter: {frontmatter: {type: {eq: "blog"}}},
-        limit: 5) {
+        filter: {frontmatter: {type: {eq: "story"}}}) {
         edges {
           node {
             id
@@ -26,11 +25,11 @@ const RecentPosts = () => {
 
   return (
     <ul>
-      {posts.allMarkdownRemark.edges.map(({ node }) => (
+      {stories.allMarkdownRemark.edges.map(({ node }) => (
         <Entry key={node.id} node={node}></Entry>
       ))}
     </ul>
   )
 }
 
-export default RecentPosts
+export default StoryOverview

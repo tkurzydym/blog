@@ -24,6 +24,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `stories`,
+        path: `${__dirname}/src/stories`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `tkurzydym-blog`,
@@ -66,5 +73,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-image`,
   ],
 }

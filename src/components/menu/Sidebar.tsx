@@ -2,12 +2,7 @@ import React from "react"
 
 import { MenuList } from "./StyledMenu"
 import { SidebarItem } from "./SidebarItem"
-
-const toolbarItems = [
-  { link: "/", name: "Recent Posts" },
-  { link: "/archive", name: "Archive" },
-  { link: "/about", name: "About" },
-]
+import { toolbarItems } from "./MenuItems"
 
 export const Sidebar = () => (
   <MenuList>

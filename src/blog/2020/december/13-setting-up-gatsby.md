@@ -1,8 +1,9 @@
 ---
-page-title: Experiences with setting up Gatsby
-page-category: Gatsby
-page-publishdate: 2020-12-13
 slug: "blog/2020/december/13-setting-up-gatsby"
+type: blog
+title: Experiences with setting up Gatsby
+category: Gatsby
+publishdate: 2020-12-13
 ---
 
 # Experiences with setting up Gatsby
@@ -28,19 +29,19 @@ Keep in mind, that it is not supported to change the gatsby configuration files 
 
 Although I have linked the Tutorials I want to give a quick overview of the commands I executed.
 
->To install Gatsby
+To install Gatsby
 ```shellsession
 % sudo npm i -g gatsby-cli
 ```
 
 To make some first steps with my new Project I used the hello-world starter by GatsbyJS.
 
-> Create a new Project
+Create a new Project
 ```shellsession
 blog % gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-> Run the Gatsby Develop Environment
+Run the Gatsby Develop Environment
 ```shellsession
 blog % gatsby develop
 ```
@@ -56,7 +57,7 @@ Since I wanted to use asciidoctor files as blog entry I also installed the gatsb
 
 I wanted to work with styled components so I installed that as well
 
-> Install Styled-Components
+Install Styled-Components
 ```shellsession
 % npm install gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 % npm i --save-dev @types/styled-components (1)

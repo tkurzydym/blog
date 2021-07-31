@@ -16,14 +16,14 @@ type EntryProps = {
 
 export const Entry: React.FC<EntryProps> = ({ node }: EntryProps) => (
   <StyledEntry>
-    <h3 style={{marginBottom:`0.2em`}}>{node.frontmatter.page_title}</h3>
+    <h3 style={{marginBottom:`0.2em`}}>{node.frontmatter.title}</h3>
     
     <div style={{marginBottom:`0.5em`}}>
       <FontAwesomeIcon icon={faClock} title="published icon" style={{margin:`0.2em 0.5em`, verticalAlign: `middle`}}></FontAwesomeIcon>
-      {node.frontmatter.page_publishdate}
+      {node.frontmatter.publishdate}
 
       <FontAwesomeIcon icon={faBookmark} title="category icon" style={{margin:`0.2em 0.5em`, verticalAlign: `middle`}}></FontAwesomeIcon>
-      {node.frontmatter.page_category}
+      {node.frontmatter.category}
     </div>
 
     <Link to={node.frontmatter.slug}>Read Blog Entry</Link>

@@ -1,8 +1,9 @@
 ---
-page-title: PrismJS
-page-category: Gatsby
-page-publishdate: 2021-01-08
 slug: blog/2021/january/08-prism-highlighting
+type: blog
+title: PrismJS
+category: Gatsby
+publishdate: 2021-01-08
 ---
 # Syntax Highlighting
 
@@ -68,7 +69,7 @@ You already saw a GraphQL Example on my last post if you have read it.
 Here is a Java Example:
 
 
-> GiantPanda.java
+GiantPanda.java
 ```java
 public class GiantPanda extends Ursidae {
   public GiantPanda(final String name)
@@ -85,7 +86,7 @@ public class GiantPanda extends Ursidae {
 }
 ```
 
-> ConversationalStatus.java
+ConversationalStatus.java
 ```java
 enum ConservationStatus {
   EXTINCT, ENDANGERED, THREATENED, DELISTED

@@ -47,9 +47,9 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        page_category
-        page_publishdate
-        page_title
+        category
+        publishdate
+        title
         slug
         title
       }
