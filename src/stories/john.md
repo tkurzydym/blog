@@ -1,5 +1,5 @@
 ---
-slug: "john"
+slug: "stories/john"
 type: story
 category: Short Story
 title: John

@@ -14,8 +14,14 @@ type EntryProps = {
   node
 }
 
-export const Entry = ({ node }: EntryProps) => (
-  <StyledEntry>
+export const Entry = ({ node }: EntryProps) => {
+
+  const completeLink: string = node.frontmatter.slug;
+  console.log("complete: " + completeLink);
+  const link: string = completeLink.replace("stories/", '');
+  console.log("cutted: " + link);
+  return (
+    <StyledEntry>
     <h3 style={{marginBottom:`0.2em`}}>{node.frontmatter.title}</h3>
     
     <div style={{marginBottom:`0.5em`}}>
@@ -26,8 +32,9 @@ export const Entry = ({ node }: EntryProps) => (
       {node.frontmatter.category}
     </div>
 
-    <Link to={node.frontmatter.slug}>Read Blog Entry</Link>
+    <Link to={link}>Read Story</Link>
   </StyledEntry>
-)
+  )
+}
 
 export default Entry

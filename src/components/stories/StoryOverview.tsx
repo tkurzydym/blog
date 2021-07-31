@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Entry from "../blog/entry"
+import StoryEntry from "./StoryEntry"
 
 const StoryOverview = () => {
   const stories = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const StoryOverview = () => {
   return (
     <ul>
       {stories.allMarkdownRemark.edges.map(({ node }) => (
-        <Entry key={node.id} node={node}></Entry>
+        <StoryEntry key={node.id} node={node}></StoryEntry>
       ))}
     </ul>
   )
