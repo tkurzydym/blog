@@ -14,7 +14,7 @@ import { Container, MainContainer, SidebarContainer } from "./StyledContainer"
 
 
 const Layout = ({ children }: LayoutProps) => {
-  const data: any = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -24,11 +24,11 @@ const Layout = ({ children }: LayoutProps) => {
     }
   `)
 
-  const syteTitle: string = data.site.siteMetadata?.title || `Title`
+  const siteTitle: string = data.site.siteMetadata?.title || `Title`
 
   return (
     <>
-      <Header siteTitle={syteTitle} />
+      <Header siteTitle={siteTitle} />
 
       <SidebarContainer>
         <MediaQuery minWidth={951}>
