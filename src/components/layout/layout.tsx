@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header/Header"
@@ -13,8 +13,8 @@ import { ToolbarFrame } from "../menu/StyledToolbar"
 import { Container, MainContainer, SidebarContainer } from "./StyledContainer"
 
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+const Layout = ({ children }: LayoutProps) => {
+  const data: any = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -24,9 +24,11 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const syteTitle: string = data.site.siteMetadata?.title || `Title`
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={syteTitle} />
 
       <SidebarContainer>
         <MediaQuery minWidth={951}>
@@ -49,8 +51,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+type LayoutProps = {
+  children: any,
 }
 
 export default Layout

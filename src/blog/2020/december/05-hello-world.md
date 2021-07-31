@@ -1,5 +1,5 @@
 ---
-slug: "/blog/2020/december/05-hello-world"
+slug: "/2020/december/05-hello-world"
 page-title: Hello World!
 page-category: General
 page-publishdate: 2020-12-05

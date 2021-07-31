@@ -4,7 +4,11 @@ import { StyledHeader } from "./StyledHeader"
 import { Banner } from "./Banner"
 import { ExternalLinks } from "./ExternalLinks"
 
-const Header = ({ siteTitle }) => (
+type HeaderProps = {
+  siteTitle: string
+}
+
+const Header = ({ siteTitle }: HeaderProps) => (
   <StyledHeader>
     <Banner siteTitle={siteTitle} />
     <ExternalLinks />
