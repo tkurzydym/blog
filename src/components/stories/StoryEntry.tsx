@@ -17,9 +17,8 @@ type EntryProps = {
 export const Entry = ({ node }: EntryProps) => {
 
   const completeLink: string = node.frontmatter.slug;
-  console.log("complete: " + completeLink);
   const link: string = completeLink.replace("stories/", '');
-  console.log("cutted: " + link);
+
   return (
     <StyledEntry>
     <h3 style={{marginBottom:`0.2em`}}>{node.frontmatter.title}</h3>
