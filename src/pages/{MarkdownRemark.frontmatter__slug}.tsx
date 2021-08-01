@@ -18,6 +18,10 @@ const ScrollTopIcon = styled.div`
   }
 `
 
+const PublishDate = styled.div`
+  padding-bottom: 0.5rem;
+`
+
 function scrollToTop() {
     window.scrollTo({top: 0,left: 0, behavior: 'smooth'})
 }
@@ -33,6 +37,8 @@ export default function PostTemplate({ data } : any) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
+        <PublishDate>{frontmatter.publishdate}</PublishDate>
+
         <div dangerouslySetInnerHTML={{ __html: html }}/>
 
         <ScrollTopIcon>
@@ -48,7 +54,7 @@ export const query = graphql`
       html
       frontmatter {
         category
-        publishdate
+        publishdate(formatString: "MMMM DD, YYYY")
         title
         slug
         title
