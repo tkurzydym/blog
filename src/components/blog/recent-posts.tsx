@@ -6,9 +6,10 @@ const RecentPosts = () => {
   const posts = useStaticQuery(graphql`
     query PostsQuery {
       allMarkdownRemark(
-        sort: { fields: frontmatter___publishdate, order: DESC},
-        filter: {frontmatter: {type: {eq: "blog"}}},
-        limit: 5) {
+        sort: { fields: frontmatter___publishdate, order: DESC }
+        filter: { frontmatter: { type: { eq: "blog" } } }
+        limit: 5
+      ) {
         edges {
           node {
             id

@@ -10,7 +10,7 @@ const StyledBanner = styled.h2`
   height: 50;
   padding: 0.5em;
   padding-left: 1em;
-  
+
   @media only screen and (min-width: 951px) {
     position: fixed;
   }

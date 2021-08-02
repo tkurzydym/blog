@@ -5,6 +5,7 @@ title: PrismJS
 category: Gatsby
 publishdate: 2021-01-08
 ---
+
 # Syntax Highlighting
 
 Before Christmas I had set up this blog with GatsbyJS and I gave a brief introduction to what I did back then.
@@ -34,42 +35,42 @@ Create a .babelrc file to configure the Syntax Highlighting for the Website.
 
 ```json
 {
-    "presets": ["babel-preset-gatsby"],
-    "plugins": [
-      [
-        "prismjs",
-        {
-          "languages": [ // (1)
-            "javascript",
-            "css",
-            "java",
-            "typescript",
-            "go",
-            "shellsession",
-            "json",
-            "graphql"
-          ],
-          "plugins": ["show-language"],
-          "theme": "tomorrow", // (2)
-          "css": true
-        }
-      ],
-      [
-        "babel-plugin-styled-components"
-      ]
-    ]
-  }
+  "presets": ["babel-preset-gatsby"],
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": [
+          // (1)
+          "javascript",
+          "css",
+          "java",
+          "typescript",
+          "go",
+          "shellsession",
+          "json",
+          "graphql"
+        ],
+        "plugins": ["show-language"],
+        "theme": "tomorrow", // (2)
+        "css": true
+      }
+    ],
+    ["babel-plugin-styled-components"]
+  ]
+}
 ```
+
 1. All the Languages that you want to be supported by the Syntax Highlighting
-2. The theme that should be applied to the Source Code 
+2. The theme that should be applied to the Source Code
 
 You can see the Syntax Highlighting for JSON with the code for the .babelrc above.
-You already saw a GraphQL Example on my last post if you have read it. 
+You already saw a GraphQL Example on my last post if you have read it.
 
 Here is a Java Example:
 
-
 GiantPanda.java
+
 ```java
 public class GiantPanda extends Ursidae {
   public GiantPanda(final String name)
@@ -87,6 +88,7 @@ public class GiantPanda extends Ursidae {
 ```
 
 ConversationalStatus.java
+
 ```java
 enum ConservationStatus {
   EXTINCT, ENDANGERED, THREATENED, DELISTED

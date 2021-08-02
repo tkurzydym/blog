@@ -2,7 +2,12 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const SEO = ({ description = '', lang = '', meta = [], title } : SEOProps) => {
+export const SEO = ({
+  description = "",
+  lang = "",
+  meta = [],
+  title,
+}: SEOProps) => {
   const { site }: any = useStaticQuery(
     graphql`
       query {
@@ -61,15 +66,14 @@ export const SEO = ({ description = '', lang = '', meta = [], title } : SEOProps
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-    </Helmet>
+    ></Helmet>
   )
 }
 
 interface SEOProps {
-  description?: string,
-  lang?: string,
-  meta?: Array<{name: string, content: string}>,
+  description?: string
+  lang?: string
+  meta?: Array<{ name: string; content: string }>
   title: string
 }
 

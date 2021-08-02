@@ -6,9 +6,10 @@ const ArchivePosts = () => {
   const archive = useStaticQuery(graphql`
     query ArchiveQuery {
       allMarkdownRemark(
-        sort: { fields: frontmatter___publishdate, order: DESC },
-        filter: {frontmatter: {type: {eq: "blog"}}},
-        skip: 5) {
+        sort: { fields: frontmatter___publishdate, order: DESC }
+        filter: { frontmatter: { type: { eq: "blog" } } }
+        skip: 5
+      ) {
         edges {
           node {
             id

@@ -7,9 +7,7 @@ import { toolbarItems } from "./MenuItems"
 export const Sidebar = () => (
   <MenuList>
     {toolbarItems.map(item => {
-      return (
-        <SidebarItem item={item} />
-      )
+      return <SidebarItem key={item.link} item={item} />
     })}
   </MenuList>
 )

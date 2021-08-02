@@ -26,4 +26,4 @@ const StyledExternalLinks = styled.span`
   }
 `
 
-export { ExternalLinksContainer, StyledExternalLinks}
+export { ExternalLinksContainer, StyledExternalLinks }

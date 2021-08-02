@@ -6,8 +6,9 @@ const StoryOverview = () => {
   const stories = useStaticQuery(graphql`
     query StoriesQuery {
       allMarkdownRemark(
-        sort: { fields: frontmatter___publishdate, order: DESC},
-        filter: {frontmatter: {type: {eq: "story"}}}) {
+        sort: { fields: frontmatter___publishdate, order: DESC }
+        filter: { frontmatter: { type: { eq: "story" } } }
+      ) {
         edges {
           node {
             id

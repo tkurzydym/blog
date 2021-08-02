@@ -12,7 +12,6 @@ import MediaQuery from "react-responsive"
 import { ToolbarFrame } from "../menu/StyledToolbar"
 import { Container, MainContainer, SidebarContainer } from "./StyledContainer"
 
-
 const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -52,7 +51,7 @@ const Layout = ({ children }: LayoutProps) => {
 }
 
 type LayoutProps = {
-  children: any,
+  children: any
 }
 
 export default Layout

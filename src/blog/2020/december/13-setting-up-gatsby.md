@@ -30,6 +30,7 @@ Keep in mind, that it is not supported to change the gatsby configuration files 
 Although I have linked the Tutorials I want to give a quick overview of the commands I executed.
 
 To install Gatsby
+
 ```shellsession
 % sudo npm i -g gatsby-cli
 ```
@@ -37,11 +38,13 @@ To install Gatsby
 To make some first steps with my new Project I used the hello-world starter by GatsbyJS.
 
 Create a new Project
+
 ```shellsession
 blog % gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
 Run the Gatsby Develop Environment
+
 ```shellsession
 blog % gatsby develop
 ```
@@ -49,6 +52,7 @@ blog % gatsby develop
 ### AsciiDoctor Transformer
 
 Since I wanted to use asciidoctor files as blog entry I also installed the gatsby-transformer-asciidoc plugin. More on that later.
+
 ```shellsession
 % npm install gatsby-transformer-asciidoc
 ```
@@ -58,10 +62,12 @@ Since I wanted to use asciidoctor files as blog entry I also installed the gatsb
 I wanted to work with styled components so I installed that as well
 
 Install Styled-Components
+
 ```shellsession
 % npm install gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 % npm i --save-dev @types/styled-components (1)
 ```
+
 1. Since I'm using typescript I also had to install the Typescript Types
 
 ## Experiences with Gatsby itself
@@ -69,16 +75,18 @@ Install Styled-Components
 To be honest, after setting up all the Gatsby Magic with your chosen fancy plugins and config files - other than running gatsby develop - you won't very much notice that you're using Gatsby. At least while developing.
 
 ### Gatsby Config
+
 The setup of the Gatsby Config is also very well documented in the tutorials, that's why I am skipping a detailed guide for this blog entry.
-Additionally, the config is also self-explanatory for the simpler fields and including plugins is pretty straight forward too. 
+Additionally, the config is also self-explanatory for the simpler fields and including plugins is pretty straight forward too.
 
 What's way more noticeable is GraphQL. If you have never worked with GraphQL you will quickly start liking it. With GraphQL you can basically query data for further usage in your React Components. It's fast, very easy to use and very mighty.
 
 ### Gatsby Nodes
+
 I'm using it to query my Asciidoctor files in my blog directory and I can also query page-attributes that I define in my asciidoctor files.
 When you're using the asciidocter-transformer you will need to implement a gatsby-node.js file in which you create nodes so that the data is available via GraphQL and also create pages _dynamically_ to be able to view the transformed asciidoctor html as a page on your website.
 
->NOTE: Dynamically is a word used with causion right here. The Pages are created while building the web page and are published as static pages.
+> NOTE: Dynamically is a word used with causion right here. The Pages are created while building the web page and are published as static pages.
 
 That comes in pretty handy, because I can define for example the publish date and also a category in my blog post itself via page attributes. With GraphQL I can show this data in my Blog Post as well in the overview of my recent posts or archive view.
 
@@ -86,23 +94,26 @@ The Query for that looks like that:
 
 ```graphql
 query PostsQuery {
-      allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC }) { # (1)
-        edges {
-          node {
-            id
-            fields {
-              slug # (2)
-            }
-            pageAttributes { # (3)
-              category
-              publishdate
-              title
-            }
-          }
+  allAsciidoc(sort: { fields: pageAttributes___publishdate, order: DESC }) {
+    # (1)
+    edges {
+      node {
+        id
+        fields {
+          slug # (2)
+        }
+        pageAttributes {
+          # (3)
+          category
+          publishdate
+          title
         }
       }
     }
+  }
+}
 ```
+
 1. I'm using a query that returns allAsciidoc nodes sorted by the publishdate with a descending order
 2. The slug field is a created node field which contains the file path of the asciidoctor file so we can provide a link to the page
 3. The pageAttributes node contains the page-attributes that we defined in the asciidoctor files.
@@ -123,7 +134,7 @@ PrismJS. It still works fast, and for my blogging needs the solution is probably
 
 ## Conclusion
 
-It was a straight forward experience to use GatsbyJS. If you don't have experience with ReactJS and GraphQL, you have a small learning curve at the beginning and need some time to get used to the concepts. But both are very well documented. The Documentation of Gatsby with all Tutroials is exceptionally good as well. 
+It was a straight forward experience to use GatsbyJS. If you don't have experience with ReactJS and GraphQL, you have a small learning curve at the beginning and need some time to get used to the concepts. But both are very well documented. The Documentation of Gatsby with all Tutroials is exceptionally good as well.
 This can not be stated for all of the plugins. Though, some of my hassles are infused by Asciidoctor itself, which i can't account gatsby or the plugins for.
 
 If you want to have a more detailed insight of the described functions, you can find the repository of this blog on my GitHub Page.

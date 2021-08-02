@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import { StyledLink } from "./StyledMenu"
 
-export const SidebarItem = ({item}) => {
+export const SidebarItem = ({ item }) => {
   return (
     <StyledLink>
       <Link to={item.link} activeStyle={{ color: "var(--menuLinkHover)" }}>

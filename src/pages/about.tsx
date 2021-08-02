@@ -6,7 +6,6 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO title="About" />
-
     </Layout>
   )
 }
