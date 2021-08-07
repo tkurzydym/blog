@@ -1,7 +1,7 @@
 const toolbarItems = [
-  { link: "/", name: "Recent Posts" },
+  { link: "/", name: "Blog" },
   { link: "/stories", name: "Stories" },
-  { link: "/archive", name: "Blog Archive" },
+  { link: "/archive", name: "Archive" },
   { link: "/about", name: "About" },
 ]
 
