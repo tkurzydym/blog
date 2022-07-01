@@ -18,12 +18,10 @@ const StyledExternalLinks = styled.span`
       color: #2aa198;
     }
   }
-
-  a:visited {
-    &:hover {
-      color: var(--menuLinkHover);
-    }
-  }
 `
 
-export { ExternalLinksContainer, StyledExternalLinks }
+const StyledContact = styled.span`
+  padding-right: 0.5em;
+`
+
+export { ExternalLinksContainer, StyledExternalLinks, StyledContact }
