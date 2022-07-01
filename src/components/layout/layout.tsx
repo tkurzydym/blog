@@ -1,6 +1,6 @@
 import React from "react"
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "../header/Header"
 
@@ -11,6 +11,21 @@ import Toolbar from "../menu/Toolbar"
 import MediaQuery from "react-responsive"
 import { ToolbarFrame } from "../menu/StyledToolbar"
 import { Container, MainContainer, SidebarContainer } from "./StyledContainer"
+import styled from "styled-components"
+
+const StyledImpressum = styled.div`
+  bottom: 0;
+  position: fixed;
+  padding-left: 1em;
+
+  a {
+    text-decoration: none;
+    color: var(--menuLink);
+    &:hover {
+      color: var(--menuLinkHover);
+    }
+  }
+`
 
 const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -46,6 +61,12 @@ const Layout = ({ children }: LayoutProps) => {
           <main>{children}</main>
         </MainContainer>
       </Container>
+
+      <StyledImpressum>
+        <Link to={"/impressum"} activeStyle={{ color: "var(--menuLinkHover)" }}>
+          Impressum | Legal Notice
+        </Link>
+      </StyledImpressum>
     </>
   )
 }
