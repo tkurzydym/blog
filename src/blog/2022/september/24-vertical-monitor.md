@@ -24,7 +24,7 @@ what I found out.
 
 ## Pros of having a Vertical Monitor
 
-After fiddeling around with exact position and height I got massively improvements
+After fiddling around with exact position and height I got massively improvements
 in the following areas.
 Reading documents in a paper like format on screen is feeling way more
 intuitive while laid back on my chair and sipping coffee.
@@ -34,7 +34,7 @@ widescreen, feels better. Slack chats, Discord, Blogs, Articles, oh - Pull Reque
 For gods sake, I hope you don't have to review those mile long pull requests
 very often. But even small Pull Requests are way easier to read. And if one of
 your colleagues is pushing out that nightmare of a long pull request and you
-don't feel like decling it immediately, it is way easier to read on a vertical
+don't feel like declining it immediately, it is way easier to read on a vertical
 screen - at least from my point of view.
 
 So, I actually rarely code on that screen, but if I do it is most often
