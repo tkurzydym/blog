@@ -54,7 +54,7 @@ const About = () => {
       </StyledAboutMeText>
       <StyledPicture>
         <StaticImage
-          src="../../images/Tobias-bearbeitet.jpg"
+          src="../../images/about3.jpg"
           alt="It's a picture of me."
           width={400}
           height={500}
