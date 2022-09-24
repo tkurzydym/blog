@@ -95,7 +95,7 @@ enum ConservationStatus {
 }
 ```
 
-For further reference on all the themes and configuration possibilities see https://prismjs.com[PrismJS].
+For further reference on all the themes and configuration possibilities see [PrismJS](https://prismjs.com).
 
 ## Conclusion
 

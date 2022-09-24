@@ -5,7 +5,7 @@ import { StyledLink } from "./StyledMenu"
 export const SidebarItem = ({ item }) => {
   return (
     <StyledLink>
-      <Link to={item.link} activeStyle={{ color: "var(--menuLinkHover)" }}>
+      <Link to={item.link} activeStyle={{ color: "var(--menuLinkActive)" }}>
         {item.name}
       </Link>
     </StyledLink>

@@ -22,25 +22,33 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
 
-  --bg: #eee8d5;
-  --textNormal: #586e75;
-  --textTitle: #586e75;
-  --textLink: #268bd2;
-  --textLinkVisited: #6c71c4;
+  --bg: #f4f2f3;
+  --textNormal: #230903;
+  --textTitle: #230903;
+  --textLink: #6b8cb8;
+  --textLinkVisited: #896bb8;
   --hr: hsla(0, 0%, 0%, 0.2);
-  --menuLink: #93a1a1;
-  --menuLinkHover: #586e75;
 
+  --menuLink: #898f96;
+  --menuLinkActive: #292524;
 
-  
+  --entryHoverTitleColor: #125e8a;
+  --entryHoverBackgroundColor: #f4f2f3;
+
+  --bannerHoverColor: #125e8a;
+}
+
+pre[class*="language-"] {
+  background-color: #f4f2f3 !important;
+  box-shadow: 2px 2px 2px 2px #e2e2e2;
 }
 
 body.dark {
   --bg: rgb(19, 22, 34);
   --textNormal: rgba(255, 255, 255, 0.88);
-  --textTitle: white; 
+  --textTitle: white;
   --textLink: lightsalmon;
-  --textLinkVisited:rgb(202, 154, 134);
+  --textLinkVisited: rgb(202, 154, 134);
   --hr: hsla(0, 0%, 100%, 0.2);
   --menuLink: lightgrey;
   --menuLinkHover: white;

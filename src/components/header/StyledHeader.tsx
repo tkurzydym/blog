@@ -19,7 +19,7 @@ const StyledBanner = styled.h2`
 
   a {
     &:hover {
-      color: #2aa198;
+      color: var(--bannerHoverColor);
     }
     color: var(--menuLink);
     text-decoration: none;

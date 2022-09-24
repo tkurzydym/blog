@@ -14,7 +14,7 @@ const StyledEntry = styled.div`
   padding: 1rem;
 
   &:hover {
-    background-color: #fdf6e3;
+    background-color: var(--entryHoverBackgroundColor);
   }
 `
 
@@ -23,7 +23,7 @@ const StyledEntryFrame = styled.div`
     color: var(--textNormal);
     &:hover {
       h3 {
-        color: #2aa198;
+        color: var(--entryHoverTitleColor);
       }
     }
   }
