@@ -70,7 +70,19 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 750,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-image`,
