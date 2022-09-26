@@ -22,7 +22,7 @@ The initial installation and setup of Gatsby was pretty easy.
 The process is described thoroughly in tutorials and documentations on their website.
 
 Therefore, anyone that wants to try out setting up a gatsby website, shouldn't encounter too big issues while following
-the official gatsby [tutorials](https://www.gatsbyjs.com/tutorial/). Even if you're new to setting up websites. Though basic knowledge of HTML, CSS, and JavaScript is obviously required. Knowledge in [ReactJS](https://reactjs.org) definetely helps. If you're not familiar with ReactJS, it can be a good idea to check that out first.
+the official gatsby [tutorials](https://www.gatsbyjs.com/tutorial/). Even if you're new to setting up websites. Though basic knowledge of HTML, CSS, and JavaScript is obviously required. Knowledge in [ReactJS](https://reactjs.org) definitely helps. If you're not familiar with ReactJS, it can be a good idea to check that out first.
 
 Since I already knew TypeScript it was a no-brainer to me to transpose all the javascript files to typescript files.
 Keep in mind, that it is not supported to change the gatsby configuration files to typescript files.
@@ -83,7 +83,7 @@ What's way more noticeable is GraphQL. If you have never worked with GraphQL you
 
 ### Gatsby Nodes
 
-I'm using it to query my Asciidoctor files in my blog directory and I can also query page-attributes that I define in my asciidoctor files.
+I'm using it to query my asciidoctor files in my blog directory and I can also query page-attributes that I define in my asciidoctor files.
 When you're using the asciidocter-transformer you will need to implement a gatsby-node.js file in which you create nodes so that the data is available via GraphQL and also create pages _dynamically_ to be able to view the transformed asciidoctor html as a page on your website.
 
 > NOTE: Dynamically is a word used with causion right here. The Pages are created while building the web page and are published as static pages.
@@ -130,11 +130,11 @@ To achieve that, you have to intercept the asciidoc transformer. The Asciidoctor
 a Custom Converter Factory. But the Usage for that Custom Converter is not very well documented and I also had difficulties to getting it to work.
 
 Therefore I can not recommend going that way right now and would recommend to choose another way. Way simpler (but also client-side) for me was to use
-PrismJS. It still works fast, and for my blogging needs the solution is probably very much likely sufficent, since my blog posts will always have just a few small code-snippets.
+PrismJS. It still works fast, and for my blogging needs the solution is probably very much likely sufficient, since my blog posts will always have just a few small code-snippets.
 
 ## Conclusion
 
-It was a straight forward experience to use GatsbyJS. If you don't have experience with ReactJS and GraphQL, you have a small learning curve at the beginning and need some time to get used to the concepts. But both are very well documented. The Documentation of Gatsby with all Tutroials is exceptionally good as well.
+It was a straight forward experience to use GatsbyJS. If you don't have experience with ReactJS and GraphQL, you have a small learning curve at the beginning and need some time to get used to the concepts. But both are very well documented. The Documentation of Gatsby with all Tutorials is exceptionally good as well.
 This can not be stated for all of the plugins. Though, some of my hassles are infused by Asciidoctor itself, which i can't account gatsby or the plugins for.
 
 If you want to have a more detailed insight of the described functions, you can find the repository of this blog on my GitHub Page.
