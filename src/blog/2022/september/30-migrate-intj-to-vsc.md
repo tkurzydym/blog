@@ -41,21 +41,24 @@ and makes it cumbersome to use.
 Figuring out all the shortcuts on how to navigate through code was
 pretty straight forward. It's just different than in IntelliJ.
 
-Some major examples:
+My most used shortcuts as example:
 
 ```
 Quick fix: option + enter -> cmd + .
 Search for file/type: double shift -> cmd + p
-Enter to open file -> Space to open file (from project browser)
-Format document: option + command + l -> cmd shift p > Format Document
+Project browser: Enter to open file -> Space to open file
+Format document: option + command + l -> cmd + shift + p > Format Document
 Organize Imports: cmd + shift + o -> shift + option + o
 ```
 
-When it comes to peek into java methods, call hierarchy and moving through
-implementation classes I found that IntelliJ has the upper hand.
-Maybe I'm just still missing the correct extensions for VS Code, but it feels
-much better integrated and flawless in IntelliJ on how you can peek and navigate
-between objects.
+I learned that VS Codes action terminal accessed with `cmd + shift + p` is very
+powerful, I really like to use it. In IntelliJ you can access it via `cmd + shift + a`.
+
+When it comes to peeking into java methods, quicly viewing documentation,
+call hierarchy and moving through implementation classes I found that IntelliJ
+has the upper hand. Maybe I'm just still missing the correct extensions for VS Code,
+but it feels much better integrated and flawless in IntelliJ on how you can peek
+and navigate between objects.
 
 ### VS Code File Preview
 
