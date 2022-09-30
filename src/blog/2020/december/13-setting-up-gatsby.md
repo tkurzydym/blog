@@ -51,7 +51,7 @@ blog % gatsby develop
 
 ### AsciiDoctor Transformer
 
-Since I wanted to use asciidoctor files as blog entry I also installed the gatsby-transformer-asciidoc plugin. More on that later.
+Since I wanted to use Asciidoctor files as blog entry I also installed the gatsby-transformer-asciidoc plugin. More on that later.
 
 ```shellsession
 % npm install gatsby-transformer-asciidoc
@@ -83,8 +83,8 @@ What's way more noticeable is GraphQL. If you have never worked with GraphQL you
 
 ### Gatsby Nodes
 
-I'm using it to query my asciidoctor files in my blog directory and I can also query page-attributes that I define in my asciidoctor files.
-When you're using the asciidocter-transformer you will need to implement a gatsby-node.js file in which you create nodes so that the data is available via GraphQL and also create pages _dynamically_ to be able to view the transformed asciidoctor html as a page on your website.
+I'm using it to query my Asciidoctor files in my blog directory and I can also query page-attributes that I define in my Asciidoctor files.
+When you're using the asciidocter-transformer you will need to implement a gatsby-node.js file in which you create nodes so that the data is available via GraphQL and also create pages _dynamically_ to be able to view the transformed Asciidoctor html as a page on your website.
 
 > NOTE: Dynamically is a word used with causion right here. The Pages are created while building the web page and are published as static pages.
 
@@ -115,8 +115,8 @@ query PostsQuery {
 ```
 
 1. I'm using a query that returns allAsciidoc nodes sorted by the publishdate with a descending order
-2. The slug field is a created node field which contains the file path of the asciidoctor file so we can provide a link to the page
-3. The pageAttributes node contains the page-attributes that we defined in the asciidoctor files.
+2. The slug field is a created node field which contains the file path of the Asciidoctor file so we can provide a link to the page
+3. The pageAttributes node contains the page-attributes that we defined in the Asciidoctor files.
 
 ## GraphQL
 
