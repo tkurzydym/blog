@@ -1,14 +1,14 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em "roboto", serif, sans-serif;
+  font: "Fira Code", monospace;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 body {
   margin: 0;
 
-  font-family: "roboto", serif;
+  font-family: "Fira Code", monospace;
   font-weight: medium;
   font-feature-settings: "kern", "liga", "clig", "calt";
   font-kerning: normal;
