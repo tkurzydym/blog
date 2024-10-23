@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 const ToolbarTitle = styled.span`
-  padding-left: 0.2em;
-  position: relative;
   bottom: 4px;
 `
 
 const StyledToolbar = styled.div`
+  
   a {
     text-decoration: none;
+    font-size: 25px;
     color: var(--menuLink);
     &:hover {
       color: var(--menuLinkHover);
@@ -19,8 +19,9 @@ const StyledToolbar = styled.div`
 
 const ToolbarFrame = styled.div`
   width: 100%;
-  padding: 0.5em;
+  padding-bottom: 2em;
   margin: 1em auto;
+  display: flex;
 `
 
 const StyledToolbarLink = styled.span`

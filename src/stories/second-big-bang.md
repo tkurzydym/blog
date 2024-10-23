@@ -30,7 +30,7 @@ too good as a cure for the headache.
 
 For almost two weeks now Alim is having these dreams.
 In his dreams he sees a world on earth, but it is a different world.
-There are people and cities, but it's not the same people and cities he knows or has seen before.
+There are peovple and cities, but it's not the same people and cities he knows or has seen before.
 The buildings just have different placings and look differently, the layout is a different and sometimes the building is the same with a different store in it.
 Yet he definitely recognizes that it is the same location than the town he lives in himself.
 

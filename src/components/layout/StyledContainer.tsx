@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
   @media only screen and (max-width: 950px) {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   @media only screen and (min-width: 951px) {
@@ -10,9 +10,9 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-  p {
-    width: 80%;
-  }
+  //p {
+  //  width: 80%;
+  //}
 `
 
 const SidebarContainer = styled.div`

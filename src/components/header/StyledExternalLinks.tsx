@@ -20,8 +20,4 @@ const StyledExternalLinks = styled.span`
   }
 `
 
-const StyledContact = styled.span`
-  padding-right: 0.5em;
-`
-
-export { ExternalLinksContainer, StyledExternalLinks, StyledContact }
+export { ExternalLinksContainer, StyledExternalLinks }

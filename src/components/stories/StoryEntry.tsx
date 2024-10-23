@@ -7,11 +7,9 @@ import { faClock, faBookmark } from "@fortawesome/free-regular-svg-icons"
 
 const StyledEntry = styled.div`
   margin: 2rem auto;
-  border: 1px;
-  border-color: rgba(0, 0, 0, 0.12);
-  border-style: solid;
-  border-radius: 0.5rem;
   padding: 1rem;
+  border-left: 5px solid var(--violet);
+  border-radius: 10px;
 
   &:hover {
     background-color: var(--entryHoverBackgroundColor);

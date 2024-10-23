@@ -34,30 +34,31 @@ const About = () => {
       <h1>This is me!</h1>
       <StyledAboutMeText>
         <p>
-          My name is Tobias. I'm a Software Engineer / Enterprise Developer with
-          about 7 years of experience including my 3 years of apprenticeship.
+          My name is Tobias. I'm a Software Developer and -Architect.
         </p>
         <p>
           I have mainly worked on enterprise applications following the Domain
           Driven Design approach and using frameworks like Spring Boot and
-          Quarkus. Starting with monoliths, I have gone through different
+          Quarkus.
+          Starting with monoliths, I have gone through different
           architecture variants and am currently working on a cloud-native
-          microservice platform. More recently, I started working on MLOps
-          (Machine Learning Operations) with a focus on learning how to operate
-          software based on machine learning systems in production. Over the
-          years, I have grown a love for software craftsmanship and clean code.
+          microservice platform.
+          More recently, I got more and more into Platform Engineering
+          and Software Reliability Engineering, though my tech heart still beats for the
+          application development part of the job.
+          Over the years, I have grown a love for software craftsmanship and clean code.
         </p>
         <p>
-          In my spare time, I enjoy being outside on my gravel bike or climbing
-          at our local bouldering gym.
+          In my spare time I enjoy being outside on my gravel bike or on the contrary being
+          inside in my Sim Racing Cockpit and race online against other people on iRacing.
         </p>
       </StyledAboutMeText>
       <StyledPicture>
         <StaticImage
-          src="../../images/about3.jpg"
+          src="../../images/about4.jpg"
           alt="It's a picture of me."
-          width={400}
-          height={500}
+          width={600}
+          height={800}
           layout="constrained"
           placeholder="blurred"
         ></StaticImage>

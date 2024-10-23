@@ -16,7 +16,7 @@
           "jsx"
         ],
         "plugins": ["show-language"],
-        "theme": "default",
+        "theme": "solarizedlight",
         "css": true
       }
     ],

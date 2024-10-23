@@ -4,7 +4,9 @@ html {
   font: "Fira Code", monospace;
   box-sizing: border-box;
   overflow-y: scroll;
+  background-color: var(--bg);
 }
+
 body {
   margin: 0;
 
@@ -14,7 +16,7 @@ body {
   font-kerning: normal;
   word-wrap: break-word;
 
-  background-color: var(--bg);
+  background-color: var(--bg-darker);
   color: var(--textNormal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,36 +24,45 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
 
-  --bg: #f4f2f3;
-  --textNormal: #230903;
-  --textTitle: #230903;
-  --textLink: #6b8cb8;
-  --textLinkVisited: #896bb8;
-  --hr: hsla(0, 0%, 0%, 0.2);
+  /* Solarized dark: */
+  --base03:    #002b36;
+  --base02:    #073642;
+  --base01:    #586e75;
+  --base00:    #657b83;
+  --base0:     #839496;
+  --base1:     #93a1a1;
+  --base2:     #eee8d5;
+  --base3:     #fdf6e3;
+  --yellow:    #b58900;
+  --orange:    #cb4b16;
+  --red:       #dc322f;
+  --magenta:   #d33682;
+  --violet:    #6c71c4;
+  --blue:      #268bd2;
+  --cyan:      #2aa198;
+  --green:     #859900;
 
-  --menuLink: #898f96;
-  --menuLinkActive: #292524;
+  --bg: var(--base02);
+  --bg-darker: var(--base03);
+  --textNormal: var(--base0);
+  --textTitle: var(--base1);
+  --textLink: var(--blue);
+  --textLinkVisited: var(--violet);
+  --hr: hsla(0, 0%, 100%, 0.2);
 
-  --entryHoverTitleColor: #125e8a;
-  --entryHoverBackgroundColor: #f4f2f3;
+  --menuLink: var(--base00);
+  --menuLinkHover: var(--yellow);
+  --menuLinkActive: var(--yellow);
 
-  --bannerHoverColor: #125e8a;
+  --entryHoverTitleColor: var(--yellow);
+  --entryHoverBackgroundColor: var(--base03);
+
+  --bannerHoverColor: var(--yellow);
 }
 
 pre[class*="language-"] {
   background-color: #f4f2f3 !important;
   box-shadow: 2px 2px 2px 2px #e2e2e2;
-}
-
-body.dark {
-  --bg: rgb(19, 22, 34);
-  --textNormal: rgba(255, 255, 255, 0.88);
-  --textTitle: white;
-  --textLink: lightsalmon;
-  --textLinkVisited: rgb(202, 154, 134);
-  --hr: hsla(0, 0%, 100%, 0.2);
-  --menuLink: lightgrey;
-  --menuLinkHover: white;
 }
 
 article,
@@ -101,8 +112,6 @@ a:visited {
 a:active,
 a:hover {
   outline-width: 0;
-  border-style: solid;
-  border-width: 0px 0px 2px 0px;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -118,6 +127,9 @@ dfn {
   font-style: italic;
 }
 h1 {
+  color: var(--textNormal);
+}
+h1 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -126,7 +138,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -173,6 +185,7 @@ code,
 kbd,
 pre,
 samp {
+  background-color: var(--base02);
   font-family: monospace;
   font-size: 1em;
 }
@@ -305,7 +318,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -322,7 +335,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -339,7 +352,7 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -356,7 +369,7 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -373,7 +386,7 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /*color: inherit;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;

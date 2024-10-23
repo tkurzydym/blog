@@ -7,7 +7,7 @@ export const ToolbarItem = ({ item }) => (
   <StyledToolbarLink>
     <Link
       to={item.link}
-      activeStyle={{ color: "var(--menuLinkHover)" }}
+      activeStyle={{ color: "var(--menuLinkActive)" }}
       title={item.name}
     >
       <ToolbarTitle>{item.name}</ToolbarTitle>
