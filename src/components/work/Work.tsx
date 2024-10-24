@@ -55,19 +55,19 @@ const Work = () => {
             title: 'Software Developer',
             company: 'OPEN KNOWLEDGE GmbH',
             period: '09/2020 – present',
-            duration: '4 Jahre',
+            duration: 'Four years ongoing',
         },
         {
             title: 'Software Engineer',
             company: 'CREALOGIX Advisory GmbH & Co. KG',
             period: '07/2018 – 08/2020',
-            duration: '2 Jahre',
+            duration: 'Two years',
         },
         {
             title: 'Fachinformatiker für Anwendungsentwicklung',
             company: 'ELAXY Financial Software & Solution GmbH & Co. KG',
             period: '08/2015 - 06/2018',
-            duration: '3 Jahre',
+            duration: 'Three years',
         },
     ];
 
