@@ -16,6 +16,9 @@ body {
   font-kerning: normal;
   word-wrap: break-word;
 
+  background-image: radial-gradient(circle, var(--bg) 0.095rem, transparent 1px);
+  background-size: 2rem 2rem;
+
   background-color: var(--bg-darker);
   color: var(--textNormal);
   -webkit-font-smoothing: antialiased;
