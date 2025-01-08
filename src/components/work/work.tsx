@@ -53,9 +53,15 @@ const Work = () => {
     const experiences = [
         {
             title: 'Software Developer',
+            company: 'Red Oak Consulting & Services for IT GmbH & Co. KG',
+            period: '12/2024 – present',
+            duration: 'Just starting the new adventure!',
+        },
+        {
+            title: 'Software Developer',
             company: 'OPEN KNOWLEDGE GmbH',
-            period: '09/2020 – present',
-            duration: 'Four years ongoing',
+            period: '09/2020 – 12/2024',
+            duration: 'Four years',
         },
         {
             title: 'Software Engineer',
